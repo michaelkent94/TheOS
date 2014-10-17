@@ -34,6 +34,7 @@ kernel/interrupts.o \
 kernel/timer.o \
 kernel/keyboard.o \
 kernel/rtc.o \
+kernel/pmm.o \
 
 CRTI_OBJ:=$(ARCHDIR)/crti.o
 CRTBEGIN_OBJ:=$(shell $(CC) $(CFLAGS) $(LDFLAGS) -print-file-name=crtbegin.o)
@@ -67,6 +68,9 @@ theos.kernel: $(OBJ_LINK_LIST) $(ARCHDIR)/linker.ld
 
 %.o: %.s
 	$(CC) -c $< -o $@ $(CFLAGS)
+	
+%.o: %.nasm
+	$(NASM) -f elf32 -o $@ $<
 
 clean:
 	rm -f theos.kernel $(OBJS) $(ALL_OUR_OBJS) *.o */*.o */*/*.o

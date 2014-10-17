@@ -16,6 +16,7 @@
 #include <kernel/timer.h>
 #include <kernel/keyboard.h>
 #include <kernel/rtc.h>
+#include <kernel/pmm.h>
 
 #include <asm/io.h>
 
