@@ -24,8 +24,6 @@ void gdt_setEntry(int32_t index, uint32_t base, uint32_t limit, uint8_t access, 
 
 void gdt_install() {
 
-	printf("Installing GDT...\n");
-
 	gdtp.limit = sizeof(gdtEntries) - 1;
 	gdtp.base = (uint32_t) &gdtEntries;
 
@@ -36,6 +34,8 @@ void gdt_install() {
 	gdt_setEntry(4, 0, 0xffffffff, 0xf2, 0xcf);		// user space data segment
 
 	gdt_flush();
+
+	printf("Installing GDT...\n");
 
 	DONE_OK();
 }

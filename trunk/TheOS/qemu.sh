@@ -2,4 +2,4 @@
 set -e
 . ./iso.sh
  
-qemu-system-$(./target-triplet-to-arch.sh $HOST) -m 128 -cdrom theos.iso
+qemu-system-$(./target-triplet-to-arch.sh $HOST) -m 4096 -cdrom theos.iso
