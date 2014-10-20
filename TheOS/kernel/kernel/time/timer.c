@@ -1,4 +1,4 @@
-#include <kernel/timer.h>
+#include <kernel/time/timer.h>
 #include <kernel/system.h>
 
 static uint32_t frequency;

@@ -29,12 +29,13 @@ LIBS:=$(LIBS) $(KERNEL_ARCH_LIBS)
 OBJS:=\
 $(KERNEL_ARCH_OBJS) \
 kernel/kernel.o \
-kernel/tables.o \
-kernel/interrupts.o \
-kernel/timer.o \
+kernel/tables/tables.o \
+kernel/tables/interrupts.o \
+kernel/time/timer.o \
 kernel/keyboard.o \
-kernel/rtc.o \
-kernel/pmm.o \
+kernel/time/rtc.o \
+kernel/memory/phys.o \
+kernel/memory/virtual.o \
 
 CRTI_OBJ:=$(ARCHDIR)/crti.o
 CRTBEGIN_OBJ:=$(shell $(CC) $(CFLAGS) $(LDFLAGS) -print-file-name=crtbegin.o)

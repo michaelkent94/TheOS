@@ -1,4 +1,4 @@
-#include <kernel/tty.h>
+#include <kernel/screen/tty.h>
 #include <kernel/system.h>
 
 #include <stdbool.h>
@@ -17,7 +17,7 @@ void terminal_initialize() {
 	terminal_row = 0;
 	terminal_column = 0;
 	terminal_color = STATUS_NORMAL;
-	terminal_header_color = make_color(COLOR_WHITE, COLOR_LIGHT_BLUE);
+	terminal_header_color = make_color(COLOR_WHITE, COLOR_GREY);
 	terminal_buffer = VGA_MEMORY;
 	terminal_header_buffer = (uint16_t *) 0xB8000;
 	terminal_clear();

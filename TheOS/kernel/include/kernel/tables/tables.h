@@ -3,7 +3,7 @@
 
 #include <stdint.h>
 
-#include <kernel/interrupts.h>
+#include <kernel/tables/interrupts.h>
 
 #include <asm/io.h>
 

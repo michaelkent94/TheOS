@@ -5,7 +5,7 @@
 #include <ctype.h>
 
 #if defined(__is_theos_kernel)
-#include <kernel/tty.h>
+#include <kernel/screen/tty.h>
 #endif
 
 char intHolder[256];	// This is extremely bad practice but will do for now

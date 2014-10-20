@@ -1,4 +1,4 @@
-#include <kernel/interrupts.h>
+#include <kernel/tables/interrupts.h>
 
 isr_t handlers[256];
 

@@ -1,3 +1,6 @@
+#ifndef _MULTIBOOT_H
+#define _MULTIBOOT_H 1
+
 /* multiboot.h - the header for Multiboot */
      /* Copyright (C) 1999, 2001  Free Software Foundation, Inc.
 
@@ -117,3 +120,5 @@
      } memory_map_t;
 
      #endif /* ! ASM */
+
+#endif

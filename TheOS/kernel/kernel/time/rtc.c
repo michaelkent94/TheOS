@@ -1,4 +1,4 @@
-#include <kernel/rtc.h>
+#include <kernel/time/rtc.h>
 #include <asm/io.h>
 
 #define CURRENT_YEAR        2014                            // Change this each year!

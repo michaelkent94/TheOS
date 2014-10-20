@@ -7,13 +7,16 @@ SECTIONS
 
 	.setup :
 	{
+		_SETUP_START = .;
 		*(.setup)
+		_SETUP_END = .;
 	}
 
 	. += 0xC0000000;
 
 	.text : AT(ADDR(.text) - 0xC0000000)
 	{
+		_KERNEL_START = .;
 		*(.text)
 	}
 
@@ -27,5 +30,6 @@ SECTIONS
 	{
 		*(COMMON*)
 		*(.bss*)
+		_KERNEL_END = .;
 	}
 }

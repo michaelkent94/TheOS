@@ -9,14 +9,15 @@
 #include <stdio.h>
 #include <ctype.h>
 
-#include <kernel/tty.h>
-#include <kernel/vga.h>
-#include <kernel/interrupts.h>
-#include <kernel/tables.h>
-#include <kernel/timer.h>
+#include <kernel/screen/tty.h>
+#include <kernel/screen/vga.h>
+#include <kernel/tables/interrupts.h>
+#include <kernel/tables/tables.h>
+#include <kernel/time/timer.h>
 #include <kernel/keyboard.h>
-#include <kernel/rtc.h>
-#include <kernel/pmm.h>
+#include <kernel/time/rtc.h>
+#include <kernel/memory/phys.h>
+#include <kernel/memory/virtual.h>
 
 #include <asm/io.h>
 

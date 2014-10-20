@@ -1,7 +1,7 @@
 #include <stdio.h>
  
 #if defined(__is_theos_kernel)
-#include <kernel/tty.h>
+#include <kernel/screen/tty.h>
 #endif
  
 int putchar(int ic) {

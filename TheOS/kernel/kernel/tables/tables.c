@@ -1,4 +1,4 @@
-#include <kernel/tables.h>
+#include <kernel/tables/tables.h>
 #include <kernel/system.h>
 
 /**************************************************
